@@ -3,11 +3,7 @@
   "version": "0.1.0",
   "private": false,
   "license": "MIT",
-<<<<<<< HEAD
   "homepage": "http://aungheinhtoo.github.io",
-=======
-  "homepage": "http://aungheinhtoo.github.io/",
->>>>>>> 781168a922be1d8a83a0a49e63e209df213720f8
   "dependencies": {
     "@carbon/icons-react": "^10.6.1",
     "@carbon/themes": "^10.7.0",
@@ -43,11 +39,7 @@
     ]
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "gh-pages": "^2.1.1",
-    "sass": "^1.32.12"
-=======
+    "sass": "^1.32.12",
     "gh-pages": "^3.1.0"
->>>>>>> 781168a922be1d8a83a0a49e63e209df213720f8
   }
 }
