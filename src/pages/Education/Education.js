@@ -22,6 +22,7 @@ const Education = ({ user }) => {
                 </span>
               </div>
               <Paragraph>{education.description.replace('\n\n', '\n')}</Paragraph>
+              <Paragraph>{education.activities?education.activities.replace('\n\n', '\n'):null}</Paragraph>
             </EducationItem>
           ))}
         </ul>
