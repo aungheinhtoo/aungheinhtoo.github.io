@@ -1,8 +1,11 @@
 import React from 'react';
+import { Fragment } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { SideNavItems, SideNavLink } from 'carbon-components-react/lib/components/UIShell';
+import { Tile } from 'carbon-components-react/lib/components/Tile';
+import { SideNavDivider } from 'carbon-components-react/lib/components/UIShell';
 
-import { StyledSideNav } from './styles';
+import { StyledNotice, StyledSideNav } from './styles';
 
 const items = [
   { name: 'Me', path: '/' },
@@ -11,26 +14,33 @@ const items = [
   { name: 'Education', path: '/education' },
 ];
 
+
 const Sidebar = () => {
   const location = useLocation();
 
   return (
-    <StyledSideNav isFixedNav expanded isChildOfHeader={false} aria-label="Side navigation">
-      <SideNavItems>
-        {items.map(i => (
-          <SideNavLink
-            isActive={
-              location.pathname === '/' && i.path === '/' ? true : location.pathname === i.path
-            }
-            element={Link}
-            to={i.path}
-            key={i.name}
-          >
-            {i.name}
-          </SideNavLink>
-        ))}
-      </SideNavItems>
-    </StyledSideNav>
+    <Fragment>
+      <StyledSideNav isFixedNav expanded isChildOfHeader={false} aria-label="Side navigation">
+        <SideNavItems>
+          {items.map(i => (
+            <SideNavLink
+              isActive={
+                location.pathname === '/' && i.path === '/' ? true : location.pathname === i.path
+              }
+              element={Link}
+              to={i.path}
+              key={i.name}
+            >
+              {i.name}
+            </SideNavLink>
+          ))}
+          <SideNavDivider />
+          <StyledNotice>
+            This website is currently under development
+          </StyledNotice>
+        </SideNavItems>
+      </StyledSideNav>
+    </Fragment>
   );
 };
 
