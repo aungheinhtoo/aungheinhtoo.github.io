@@ -2,7 +2,6 @@ import React from 'react';
 import { Fragment } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { SideNavItems, SideNavLink } from 'carbon-components-react/lib/components/UIShell';
-import { Tile } from 'carbon-components-react/lib/components/Tile';
 import { SideNavDivider } from 'carbon-components-react/lib/components/UIShell';
 
 import { StyledNotice, StyledSideNav } from './styles';
