@@ -2,7 +2,6 @@ import React from 'react';
 import { Fragment } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { SideNavItems, SideNavLink } from 'carbon-components-react/lib/components/UIShell';
-import { SideNavDivider } from 'carbon-components-react/lib/components/UIShell';
 
 import { StyledNotice, StyledSideNav } from './styles';
 
@@ -33,7 +32,6 @@ const Sidebar = () => {
               {i.name}
             </SideNavLink>
           ))}
-          <SideNavDivider />
           <StyledNotice>
             This website is currently under development
           </StyledNotice>
