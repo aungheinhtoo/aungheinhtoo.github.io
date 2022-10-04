@@ -12,7 +12,22 @@ const Projects = ({ user }) => {
           {user.projects.map((project, i) => (
             <ProjectItem key={i}>
               <ProjectTitle>{project.displayName}</ProjectTitle>
-              <p>{project.summary}</p>
+              {project.summary.split('\n').filter(ele => ele !== "").map((item) => (
+                <p>
+                  <span> &sdot; </span>
+                  <span>
+                    {item}
+                  </span>
+                </p>
+              ))}
+              {project.description.split('\n').filter(ele => ele !== "").map((item) => (
+                <p>
+                  <span> &sdot; </span>
+                  <span>
+                    {item}
+                  </span>
+                </p>
+              ))}
               <SkillContainer>
                 {[...project.languages, ...project.libraries].map((item, j) => (
                   <Pill key={j}>{item}</Pill>

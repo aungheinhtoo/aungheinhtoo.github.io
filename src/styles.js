@@ -10,6 +10,13 @@ export const Paragraph = styled.p`
   white-space: pre-wrap;
 `;
 
+export const UnorderedList = styled.ul`
+`;
+
+export const ListItem = styled.li`
+  white-space: pre-wrap;
+`;
+
 export const Pill = styled.span`
   display: inline-block;
   margin-right: 0.75rem;
