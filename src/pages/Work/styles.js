@@ -9,8 +9,13 @@ export const WorkItem = styled.li`
 
 export const WorkTitle = styled.h4`
   font-weight: bold;
+  display: flex;
+  justify-content: space-between;
 `
 
+export const WorkTimeRange = styled.h5`
+  font-weight: bold;
+`
 export const JobTitle = styled.p`
   font-weight: bold;
   display: inline-block;

@@ -1,11 +1,12 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import { SectionTitle, Paragraph } from '../../styles';
-import { WorkItem, WorkTitle, JobTitle } from './styles';
+import { WorkItem, WorkTitle, JobTitle, WorkTimeRange } from './styles';
 import { ListItem } from '../../styles';
 import { UnorderedList } from '../../styles';
 import { SkillContainer } from '../Projects/styles';
 import { Pill } from '../../styles';
+import moment from 'moment';
 
 const Work = ({ user }) => {
   return (
@@ -15,13 +16,11 @@ const Work = ({ user }) => {
         <ul>
           {user.work.map((work, i) => (
             <WorkItem key={i}>
-              <WorkTitle>{work.position}</WorkTitle>
+              <WorkTitle>{work.position}<WorkTimeRange>
+                {moment(work.startDate).format("MMM YYYY")} to {work.endDate ? moment(work.endDate).format("MMM YYYY") : "Current"}
+              </WorkTimeRange></WorkTitle>
               <div>
                 <JobTitle>{work.company}</JobTitle> <span>{work.location}</span>
-                <span> &sdot; </span>
-                <span>
-                  {work.start.year} to {work.end.year ? work.end.year : "Current"}
-                </span>
               </div>
               <UnorderedList>
                 {work.summary.split('\n').map(item => (

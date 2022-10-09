@@ -18,9 +18,9 @@ const Pages = ({ user }) => {
         <Route path="/work">
           <Work user={user} />
         </Route>
-        <Route path="/education">
+        {/* <Route path="/education">
           <Education user={user} />
-        </Route>
+        </Route> */}
       </Switch>
     </Router>
   );
