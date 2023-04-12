@@ -1,11 +1,33 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Layout from '../../components/Layout';
 import { SectionTitle, Paragraph, Pill } from '../../styles';
 import { ProfileLink, EducationItem, Institution, Degree, EducationTimeRange } from './styles';
 import moment from 'moment';
 import { SocialIconsMap } from '../../utils/IconMaps';
+import { useHistory } from 'react-router-dom';
 
 const Me = ({ user }) => {
+  // const history = useHistory();
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollY = window.scrollY;
+  //     const clientHeight = document.documentElement.clientHeight;
+  //     const offsetHeight = document.documentElement.offsetHeight;
+
+  //     if (scrollY + clientHeight >= offsetHeight) {
+  //       // You can change the route here
+  //       history.push('/work');
+  //     }
+  //   };
+
+  //   window.addEventListener('scroll', handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, [history]);
+
   return (
     <Layout user={user}>
       <div>
