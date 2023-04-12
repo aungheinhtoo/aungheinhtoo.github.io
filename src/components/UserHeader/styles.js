@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { blue } from '@carbon/colors';
 
 export const HeaderContainer = styled.div`
   display: flex;
@@ -44,3 +45,12 @@ export const ViewResumeLink = styled.a`
     margin-left: 8px;
   }
 `;
+
+export const BlueText = styled.span`
+  color: ${blue[30]};
+  font-weight: bold;
+`
+
+export const LightBlueText = styled.span`
+  color: ${blue[20]};
+`
